@@ -2,7 +2,7 @@
 - 跟新日期 2018年03月20日
 
 
-## 脚手架 create-react-app 说明文旦
+## 脚手架 create-react-app 说明文档
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
