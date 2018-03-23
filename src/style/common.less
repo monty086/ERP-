@@ -1,0 +1,54 @@
+@import 'default';              //变量
+// @import 'lib/mixin';            //函数
+// @import 'lib/filter';           //过滤 wrap
+// @import 'lib/operation-wrap';   //表单控件
+// @import 'lib/card';             //表单控件
+// @import 'lib/table';            //表单控件
+// @import 'lib/pagination';       //表单控件
+// @import 'lib/form';             //表单控件
+// @import 'lib/map';              //表单控件
+// @import 'lib/load';             //loading
+// @import 'lib/modal';            //弹框
+
+body {
+  background: @colorL;
+  font-family: "Helvetica Neue For Number", "PingFang SC Light", "Heiti SC", "San Francisco", "Helvetica", Arial, sans-serif;
+}
+
+.clearfix{
+  &:after{
+    content:" ";
+    clear:both;
+    display:block;
+    visibility:hidden;
+  }
+}
+
+.line{
+  border-top: 1px solid #d7d7d7;
+  margin-bottom: 20px;
+}
+
+// 最外层样式容器
+.body-container{
+  display:flex;
+  //定义左侧导航占比
+  .nav-left {
+    width: 14.4444%;
+    min-width:180px;
+  }
+  //右侧容器
+  .main{
+    flex:1;
+  }
+}
+
+/** main content style **/
+.main{
+  height:calc(100vh);
+  overflow:auto;
+}
+.content{
+  position:relative;
+  padding:20px;
+}
