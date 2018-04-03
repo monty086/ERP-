@@ -6,6 +6,7 @@ import Login from './page/login'
 import Home from './page/home'
 import Admin from '././page/admin'
 import Bike from '././page/useBike'
+import Order from './page/order'
 
 export default class ERouter extends React.Component{
     render(){

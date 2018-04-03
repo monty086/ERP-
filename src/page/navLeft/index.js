@@ -4,7 +4,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import { Row, Col, Menu, Icon, Table ,Tabs} from 'antd'
 import menuConfig from '../../contants/menuConfig'
-
+import './index.less'
 // import './index.less'
 const SubMenu = Menu.SubMenu;
 const TabPane = Tabs.TabPane;
@@ -160,10 +160,10 @@ export default class NavLeft extends React.Component {
         return (
             <div>
                 <Menu
+                    theme='dark'
                     onClick={this.handleClick}
                     className="left-nav"
                     mode="inline" // vertical  
-                    theme='dark'
                     selectedKeys={[this.state.currentKey]}
                 >
                     {this.state.menuTreeNode}
