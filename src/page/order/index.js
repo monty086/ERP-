@@ -133,10 +133,11 @@ class FilterForm extends React.Component{
 
 FilterForm = Form.create({})(FilterForm);
 
-class FilterForm extends React.Component{
+class SetFeeModelForm extends React.Component{
     render(){
         return (
             <div>123</div> 
         )
     }
 }
+SetFeeModelForm = Form.create({})(SetFeeModelForm);
