@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 let Utils = {
     toZero :(data)=>{
         if(data<10){

@@ -5,7 +5,7 @@ import urls from '../../contants/urls'
 import Utils from '../../contants/utils'
 const FormItem = Form.Item;
 const Option = Select.Option;
-import './index.less'
+// import './index.less'
 export default class Order extends React.Component{
     state={}
     params={
@@ -158,7 +158,7 @@ export default class Order extends React.Component{
                     onRowClick={this.onRowClick}
                 />
                 <Modal
-                    title="设置费用模板"
+                    title="订单详情"
                     visible={this.state.setFeeModalVisible}
                     onOk={this.modelFormSubmit}
                     onCancel={this.closeModelForm}
@@ -195,7 +195,7 @@ class FilterForm extends React.Component{
         const {getFieldDecorator} = this.props.form; 
         return (
             <Form layout="inline">
-                <div className="page-func-row page-func-all">
+                <div>
                     <FormItem label="城市">
                         {getFieldDecorator('city',{initialValue:''})(
                         <Select

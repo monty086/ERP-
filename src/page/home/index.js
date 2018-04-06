@@ -3,30 +3,23 @@ import {Button,Tabs,Row,Col} from 'antd';
 import Header from '../header'
 import NavLeft from '../navLeft'
 import menuList from '../../contants/menuConfig'
-import './index.less'
-
-const TabPane = Tabs.TabPane
-
+// import './index.less'
 
 export default class Home extends React.Component{
-    state = {
-        isAdmin:1,
-        menuList
+    state={
     }
     componentDidMount(){
         this.setState({
-            isAdmin:1,
             menuList,
         })
     }
-
     render (){
         return (
             <div>
-                <Header userName={'yuanmeng'}/>
+                <Header userName={'珠峰培训'}/>
                 <Row className="welcome-page">
                     <Col span="3" className="nav-left">
-                         <NavLeft isAdmin={this.state.isAdmin} menuList={this.state.menuList}/>
+                         <NavLeft menuList={this.state.menuList}/>
                     </Col>
                     <Col span="21" className="right-container">
                         {this.props.children}

@@ -7,7 +7,6 @@ import Home from './page/home'
 import Admin from '././page/admin'
 import Bike from '././page/useBike'
 import Order from './page/order'
-
 export default class ERouter extends React.Component{
     render(){
         return (
@@ -41,20 +40,4 @@ export default class ERouter extends React.Component{
         )
     }
 }
-
-// export const HomeList = ({ match })=>{
-//     return (
-//         <BrowserRouter>
-//             <Switch>
-//                 {/* <Route exact path='/home' component={Home} /> */}
-//                 <Route path={`${match}/order `} render={(props)=>{
-//                         <div>112233</div>
-//                 }} />
-//                 <Route path={`${match}/use/bike`} component={Bike} />
-//             </Switch>
-            
-//         </BrowserRouter>
-//     )
-    
-// }
 

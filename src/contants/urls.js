@@ -7,6 +7,7 @@ urls.baseAPI = protocol+'//'+host.replace('location','www.yuanmeng.com')
 
 
 urls.order_list = '/order/list'
+urls.login = '/login'
 
 
 export default urls
