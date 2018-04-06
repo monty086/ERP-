@@ -7,52 +7,35 @@ export default [
                 title:'用户管理',
                 key:'/order',
                 btnList:[
-                    {title:'查看',key:'query'},
-                    {title:'用户钱包',key:'wallet'},
-                    {title:'加黑名单',key:'add'},
-                    {title:'撤黑名单',key:'revert'},
-                    {title:'赠送车费',key:'give'},
-                    {title:'赠送车费审核',key:'check'},
-                    {title:'退车费充值余额',key:'return'},
-                    {title:'注销账户',key:'logoff'},
-                    {title:'充值查询',key:'recharge'},
-                    {title:'身份查询',key:'idcard'},
-                    {title:'优惠券查询',key:'coupon'},
-                    {title:'用户红包',key:'red'},
-                    {title:'免押金卡记录',key:'record'}
+                    {aa:'123'}
                 ]
             },
             {
                 title:'认证管理',
                 key:'/use/bike',
                 btnList:[
-                    {title:'查看',key:'query'},
-                    {title:'查看详情',key:'detail'},
-                    {title:'审核',key:'check'}
+       
                 ]
             },
             {
                 title:'身份审核',
-                key:'/order',
+                key:'/haha',
                 btnList:[
-                    {title:'查看',key:'query'},
-                    {title:'查看详情',key:'detail'},
-                    {title:'审核',key:'check'}
+     
                 ]
             },
             {
                 title:'退押金管理',
                 key:'/returnDeposit',
                 btnList:[
-                    {title:'查看',key:'query'},
-                    {title:'审核',key:'check'},
+   
                 ]
             },
             {
                 title:'系统配置',
                 key:'/sys_config',
                 btnList:[
-                    {title:'查看',key:'query'}
+             
                 ]
             }
         ]
@@ -69,20 +52,14 @@ export default [
                         title:'活动管理',
                         key:'/activity',
                         btnList:[
-                            {title:'查看',key:'query'},
-                            {title:'创建活动',key:'create'},
-                            {title:'创建红包活动',key:'red'},
-                            {title:'创建车费活动',key:'fare'},
-                            {title:'开启活动',key:'open'},
-                            {title:'关闭活动',key:'close'},
-                            {title:'活动详情',key:'detail'}
+    
                         ]
                     },
                     {
                         title:'邀请新用户',
                         key:'/invitation',
                         btnList:[
-                            {title:'查看',key:'query'}
+     
                         ]
                     }
                 ]
@@ -95,21 +72,14 @@ export default [
                         title:'APP首页推荐',
                         key:'/hp_recommend',
                         btnList:[
-                            {title:'查看',key:'query'},
-                            {title:'创建推荐',key:'create'},
-                            {title:'推荐详情',key:'detail'},
-                            {title:'关闭',key:'close'},
-                            {title:'预览',key:'preview'}
+      
                         ]
                     },
                     {
                         title:'活动中心推荐',
                         key:'/ac_recommend',
                         btnList:[
-                            {title:'查看',key:'query'},
-                            {title:'添加推荐',key:'add'},
-                            {title:'推荐详情',key:'detail'},
-                            {title:'关闭',key:'close'}
+
                         ]
                     },
                 ]
@@ -118,26 +88,21 @@ export default [
                 title:'通知管理',
                 key:'/notice',
                 btnList:[
-                    {title:'查看',key:'query'},
-                    {title:'创建通知',key:'create'},
-                    {title:'作废通知',key:'delete'}
+
                 ]
             },
             {
                 title:'充值管理',
                 key:'/recharge',
                 btnList:[
-                    {title:'查看',key:'query'},
-                    {title:'创建充值活动',key:'create'},
-                    {title:'编辑充值活动',key:'edit'},
-                    {title:'查看详情',key:'detail'}
+ 
                 ]
             },
             {
                 title:'闪屏配置',
                 key:'/splash_screen_config',
                 btnList:[
-                    {title:'查看',key:'query'}
+
                 ]
             }
         ]
@@ -150,12 +115,7 @@ export default [
                 title:'退款管理',
                 key:'/refund',
                 btnList:[
-                    {title:'查看',key:'query'},
-                    {title:'退款申请',key:'apply'},
-                    {title:'退款申请审核',key:'check'},
-                    {title:'退款完成确认',key:'confirm'},
-                    {title:'退回修改',key:'edit'},
-                    {title:'退款详情',key:'detail'}
+      
                 ]
             },
             {   
@@ -166,31 +126,28 @@ export default [
                         title:'用户账户',
                         key:'/user_account',
                         btnList:[
-                            {title:'查看',key:'query'},
-                            {title:'导出',key:'export'}
+                     
                         ]
                     },
                     {
                         title:'订单',
                         key:'/order',
                         btnList:[
-                            {title:'查看',key:'query'},
-                            {title:'导出',key:'export'}
+                
                         ]
                     },
                     {
                         title:'第三方',
                         key:'/third_party',
                         btnList:[
-                            {title:'查看',key:'query'},
-                            {title:'导出',key:'export'}
+           
                         ]
                     },
                     {
                         title:'平台红包',
                         key:'/red_envelope',
                         btnList:[
-                            {title:'查看',key:'query'}
+                
                         ]
                     }
                 ]
@@ -205,11 +162,6 @@ export default [
                 title:'角色管理',
                 key:'/role_manage',
                 btnList:[
-                    {title:'查看',key:'query'},
-                    {title:'创建角色',key:'create'},
-                    {title:'设置权限',key:'set'},
-                    {title:'删除角色',key:'delete'},
-                    {title:'用户授权',key:'auth'}
                 ]
             }
         ]

@@ -31,6 +31,7 @@ export default class ERouter extends React.Component{
                                         </Switch>
                                     </Home>
                                 </Route>
+                                <Redirect to='/'/>
                             </Switch>
                         </App>
                     </Route>
