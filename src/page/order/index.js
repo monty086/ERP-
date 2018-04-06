@@ -1,68 +1,123 @@
 import React from 'react';
 import {Radio,message,DatePicker ,Checkbox, Modal, Form, Select, Input, Button, Row, Col, Menu, Icon, Table} from 'antd'
-
-
+import BaseService from '../../component/BaseServier'
+import urls from '../../contants/urls'
+import Utils from '../../contants/utils'
+const FormItem = Form.Item;
+import './index.less'
 export default class Order extends React.Component{
+    state={}
+    params={
+        "params":''
+    }
+
+    componentWillMount(){
+        this.requestList()
+    }
+
+    requestList = () => {
+        BaseService.ajax({
+            url: urls.order_list,
+            data: this.params,
+            isMock:true,
+        }).then((response) => {
+            if (response) {
+                if (response.result) {
+                    let data = response.result
+                    var i = 0
+                    this.setState({
+                        items: data.item_list.map(function (item){
+                            item.key = i++;
+                            return item
+                        }),
+                        pagination: {
+                            onChange: (current) => {
+                                this.params.page = current;
+                                this.requestList()
+                            },
+                            current: data.page,
+                            pageSize: data.page_size,
+                            total: data.total_count,
+                            showTotal: () => {
+                                return '共' + data.total_count + '条'
+                            },
+                            showQuickJumper: true,
+                            selectedRowKeys: [],
+                        }
+                    })
+                }
+            }
+        })
+    }
     render (){
+        this.state;
         let columns = [
             {
-                title:'模板Id',
-                dataIndex:'template_id'
+                title:'订单编号',
+                dataIndex:'id'
             },
             {
-                title:'城市名称',
-                dataIndex:'city_name'
+                title:'车辆编号',
+                dataIndex:'bike_id'
             },
             {
-                title:'用车模式',
-                dataIndex:'model',
+                title:'用户姓名',
+                dataIndex:'name',
+            },
+            {
+                title:'手机号码',
+                dataIndex:'number'
+            },
+            {
+                title:'订单结束状态',
+                dataIndex:'status',
                 render(text){
-                    return text=='1'?'指定停车点':'禁停区'
+                    if(text==1){
+                        return '正常结束'
+                    }else if(text ==2){
+                        return '异常结束'
+                    }
                 }
             },
             {
-                title:'费用模版［指定停车点模式］',
-                dataIndex:'parking_template_name'
-            },
-            {
-                title:'费用模版［禁停区模式］',
-                dataIndex:'npl_template_name'
-            },
-            {
-                title:'操作时间',
-                dataIndex:'operate_time',
+                title:'开始时间',
+                dataIndex:'begin_time',
                 render: Utils.formatTime
             },
             {
-                title:'操作人',
-                dataIndex:'operate_user'
+                title:'跟进状态',
+                dataIndex:'follow_status',
+                render(text){
+                    if(text==1){
+                        return '跟进中'
+                    }else if(text ==2){
+                        return '结束跟进'
+                    }
+                }
             }
         ];
         return (
             <div>
                 <div className="card-wrap topFilterWrap">
                     <FilterForm
-                        filterSubmit={this.filterSubmit}
-                        feeTempList={this.state.feeTempList}
+                        // filterSubmit={this.filterSubmit}
+                        // feeTempList={this.state.feeTempList}
                     />
                 </div>
                 <div className="operation-buttons">
                     
                     <Button type="primary" onClick={this.openSetFeeModal}>订单详情</Button>
-
-                    <Button type="primary" onClick={this.openBatchSetFeeModal}>批量设置费用模板</Button>
-                        
                     <Button style={{float:"right"}} type="primary" onClick={this.requestList}>刷新</Button>
                 </div>
-
                 <Table
-                    updateSelectedItem={Utils.updateSelectedItem.bind(this)}
-                    selectedRowKeys={this.state.selectedRowKeys}
+                    // updateSelectedItem={Utils.updateSelectedItem.bind(this)}
+                    // selectedRowKeys={this.state.selectedRowKeys}
                     pagination={this.state.pagination}
                     dataSource={this.state.items}
                     columns={columns}
+                    className="card-wrap"
+                    bordered
                 />
-
                 <Modal
                     title="设置费用模板"
                     visible={this.state.setFeeModalVisible}

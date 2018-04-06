@@ -160,7 +160,7 @@ export default class NavLeft extends React.Component {
         return (
             <div>
                 <Menu
-                    theme='dark'
+                    // theme='dark'
                     onClick={this.handleClick}
                     className="left-nav"
                     mode="inline" // vertical  

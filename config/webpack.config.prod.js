@@ -202,8 +202,8 @@ module.exports = {
                 loader: require.resolve('less-loader'),
                 options:{
                   modifyVars:{
-                    "@primary-color": "#f9c700",
-                    // 'font-size-base':'12px',
+                    // "@primary-color": "#f9c700",
+                    'font-size-base':'12px',
                     // 'input-height-lg':'32px',
                     // 'btn-primary-color': '#333',
                   },
