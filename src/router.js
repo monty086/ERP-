@@ -12,7 +12,6 @@ export default class ERouter extends React.Component{
         return (
             // <HashRouter>
             <Router history={history}>
-                <Switch>
                     <Route path='/'>
                         <App>
                             <Switch>
@@ -34,7 +33,6 @@ export default class ERouter extends React.Component{
                             </Switch>
                         </App>
                     </Route>
-                </Switch>
             </Router>  
             // </HashRouter>  
         )
