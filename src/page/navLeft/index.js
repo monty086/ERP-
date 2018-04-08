@@ -6,11 +6,9 @@ import { Row, Col, Menu, Icon, Table ,Tabs} from 'antd'
 import menuConfig from '../../contants/menuConfig'
 // import './index.less'
 const SubMenu = Menu.SubMenu;
-const keyPath = {};
 export default class NavLeft extends React.Component {
     // 菜单的点击事件
     handleClick = (e) => {
-        console.log(e.key)
         this.setState({
             currentKey: e.key
         });
@@ -45,23 +43,6 @@ export default class NavLeft extends React.Component {
                 to={key+item.key}>{item.title}</Link></Menu.Item>;
         });
     };
-
-    renderMenu2 = (data,key='')=>{
-        return data.map((item)=>{
-            if(item.children){
-                return (
-                    <SubMenu key={key+item.key} title='item.title'>
-                        {this.renderMenu2(item.children,key+item.key)}
-                    </SubMenu>
-                )
-            }
-            return 
-                <Menu.Item key={key+item.key} name={item.title}>
-                <Link to={key+item.key}>{item.title}</Link>
-                </Menu.Item>
-            
-        })
-    }
 
     render = () => {
         return (
